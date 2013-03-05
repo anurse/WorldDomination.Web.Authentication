@@ -1,10 +1,9 @@
-
              #################################################
              ##    Web Authentication - made damn simple.   ##
              #################################################
 
 
-   You've nuget installed this package so I don't to explain what this shiz does ;)
+   You've installed this package so I don't to explain what this thing does ;)
 
 Starting Options
 ^^^^^^^^^^^^^^^^
@@ -37,7 +36,7 @@ Bonus Pro Tips
 ^^^^^^^^^^^^^^
 1. Free Login Images: Need some login buttons? Thought so: http://bit.ly/U3qSIL
 3. Coding Choons: You can't get away without some pro coding choons. Here's 2
-                  which will make your nipples hard :
+                  for ya :
                   a) http://soundcloud.com/phazing-004/dirty-south-phazing-radio-004
                   b) http://www.youtube.com/watch?v=cla38u6MrEI             
 
