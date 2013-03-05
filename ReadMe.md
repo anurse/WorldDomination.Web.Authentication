@@ -1,8 +1,8 @@
-![WTF](http://i.imgur.com/Jx9vL.jpg)
+![WTF](http://cdn.memegenerator.net/instances/400x/35692287.jpg)
 
 ![Not impressed](http://i.imgur.com/K2b91.jpg)
 
-![I just don't get it](http://i.imgur.com/AUEc3.jpg)
+![I just don't get it](http://cdn.memegenerator.net/instances/400x/35692355.jpg)
 
 ![Angry](http://i.imgur.com/hvYIx.jpg)
 
@@ -10,11 +10,11 @@
 
 ![Insane programmer](http://i.imgur.com/m7gGt.jpg)
 
-![Success Programmer](http://i.imgur.com/yQVJU.jpg)
+![Success Programmer](http://cdn.memegenerator.net/instances/400x/35692404.jpg)
 
 # A .NET package for using Facebook, Google or Twitter to Authenticate your Users #
 
-I'm blond. I'm dumb. But I program. 
+I'm dumb. But I program. 
 
 So I want a <insert deity of your choice> damn simple way to authenticate with Facebook, Twitter or wherever.
 
@@ -67,6 +67,6 @@ Don't be scared to fork and then make some pull requests. I :heart: pull request
 Then this simple library can actually be really helpful to more than 1 person (le moi) on this rock called Earth.
 
 #### Disclaimer ####
-*No blonds or Unicorns were harmed in the coding of this library.*
+*No Unicorns were harmed in the coding of this library.*
 
 ![Pew Pew](http://i.imgur.com/94PHAl.jpg)
