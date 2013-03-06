@@ -28,7 +28,7 @@ namespace WorldDomination.Web.Authentication.Mvc
             CallbackProvider = callbackProvider;
 
             // If no anti forgery class is provided, then we'll just use the default.
-            _antiForgery = antiForgery ?? new AntiForgery();
+            _antiForgery = antiForgery ?? new AspNetAntiForgery();
         }
 
         protected IAuthenticationService AuthenticationService { get; private set; }
