@@ -30,4 +30,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("0.20.0.0")]
 [assembly: AssemblyFileVersion("0.20.0.0")]
-[assembly: AssemblyInformationalVersion("0.20.0-alpha003")]
+[assembly: AssemblyInformationalVersion("0.20.0-alpha008")] // <-- NuGet Package Version

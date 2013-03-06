@@ -35,7 +35,7 @@ namespace WorldDomination.Web.Authentication.Mvc
             routes.MapRoute(
                 name: "WorldDominationAutomatedMvc-Callback",
                 url: url,
-                defaults: new { controller = "WorldDominationAuthentication", action = "RedirectToProvider" }
+                defaults: new { controller = "WorldDominationAuthentication", action = "AuthenticateCallback" }
             );
         }
     }

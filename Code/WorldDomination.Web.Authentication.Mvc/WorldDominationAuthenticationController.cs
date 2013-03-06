@@ -11,8 +11,12 @@ namespace WorldDomination.Web.Authentication.Mvc
         private string _cookieName;
 
         public WorldDominationAuthenticationController(IAuthenticationService authenticationService,
+                                                       IAuthenticationCallbackProvider callbackProvider)
+            : this(authenticationService, callbackProvider, antiForgery: null) { }
+
+        public WorldDominationAuthenticationController(IAuthenticationService authenticationService,
                                                        IAuthenticationCallbackProvider callbackProvider,
-                                                       IAntiForgery antiForgery = null)
+                                                       IAntiForgery antiForgery)
         {
             if (authenticationService == null)
             {
@@ -51,7 +55,7 @@ namespace WorldDomination.Web.Authentication.Mvc
             }
 
             // Grab the required Provider settings.
-            var settings = AuthenticationService.GetAuthenticateServiceSettings(providerkey, Request.Url);
+            var settings = AuthenticationService.GetAuthenticateServiceSettings(providerkey, Request.Url, Url.CallbackFromOAuthProvider());
 
             // Generate the Csrf token. 
             // Our convention is to remember some redirect url once we are finished in the callback.
@@ -94,20 +98,15 @@ namespace WorldDomination.Web.Authentication.Mvc
             }
 
             // Determine which settings we need, based on the Provider.
-            var settings = AuthenticationService.GetAuthenticateServiceSettings(providerkey, Request.Url);
+            var settings = AuthenticationService.GetAuthenticateServiceSettings(providerkey, Request.Url, Url.CallbackFromOAuthProvider());
 
             // Pull the "ToKeep" token from the cookie and the "ToSend" token from the query string
             var keptToken = DeserializeToken(Request);
             var recievedToken = Request.QueryString["state"];
 
-            // If we kept a token...
-            string extraData = null;
-            if (!String.IsNullOrEmpty(keptToken))
-            {
-                // Validate it against the recieved one and grab extra data
-                extraData = _antiForgery.ValidateToken(keptToken, recievedToken);
-            }
-
+            // Validate the token against the recieved one and grab extra data
+            string extraData = extraData = _antiForgery.ValidateToken(keptToken, recievedToken);
+            
             var model = new AuthenticateCallbackData();
 
             try

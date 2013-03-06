@@ -12,5 +12,10 @@ namespace WorldDomination.Web.Authentication.Mvc
         {
             return url.Action("RedirectToProvider", "WorldDominationAuthentication", new { providerKey = providerName });
         }
+
+        public static string CallbackFromOAuthProvider(this UrlHelper url)
+        {
+            return url.Action("AuthenticateCallback", "WorldDominationAuthentication");
+        }
     }
 }
