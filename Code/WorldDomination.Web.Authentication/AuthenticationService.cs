@@ -28,6 +28,15 @@ namespace WorldDomination.Web.Authentication
             }
         }
 
+        public AuthenticationService(IEnumerable<IAuthenticationProvider> providers)
+        {
+            // Skip the config-based initialization, we got a list of providers directly
+            foreach (var provider in providers)
+            {
+                AddProvider(provider);
+            }
+        }
+
         public AuthenticationService(ProviderConfiguration providerConfiguration,
                                      IList<string> scope = null, IRestClientFactory restClientFactory = null)
         {

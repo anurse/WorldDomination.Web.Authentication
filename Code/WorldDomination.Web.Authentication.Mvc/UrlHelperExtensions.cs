@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Web.Mvc;
+
+namespace WorldDomination.Web.Authentication.Mvc
+{
+    public static class UrlHelperExtensions
+    {
+        public static string RedirectToOAuthProvider(this UrlHelper url, string providerName)
+        {
+            return url.Action("RedirectToProvider", "WorldDominationAuthentication", new { providerKey = providerName });
+        }
+    }
+}
